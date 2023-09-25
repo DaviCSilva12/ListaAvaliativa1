@@ -31,7 +31,7 @@ int main() {
     float novo_salario = salario + aumento;
 
    
-        printf("O novo salário eh: %.2f\n", novo_salario);
+        printf("O novo salario eh: %.2f\n", novo_salario);
 
     return 0;
 }
