@@ -1,37 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    char n;
-    float salario, aumento;
+    char nivel;
+    float salarioA;
+    float aumento; 
+    float SalarioN;
 
+    scanf("%c", &nivel);
+    scanf("%f", &salarioA);
 
-        printf("Digite o nivel de experiencia (a, b ou c):\n");
-        scanf(" %c", &n);  
+        if(nivel == 'a'){
+            aumento = salarioA * 0.05;
+        } else if (nivel == 'b'){
+            aumento = salarioA * 0.07;
+        } else if (nivel == 'c'){
+            aumento = salarioA * 0.08;
+        } else{
+            aumento = 0.0;
+            printf("Nível de experiência inválido.\n");
+        }
 
-        printf("Digite o salario atual:\n");
-        scanf("%f", &salario);
+        SalarioN = aumento + SalarioA;
 
-    
-    switch (n) {
-        case 'a':
-            aumento = salario * 0.05;
-            break;
-        case 'b':
-            aumento = salario * 0.07;
-            break;
-        case 'c':
-            aumento = salario * 0.08;
-            break;
-        default:
-            printf("Nivel de experiencia invalido.\n");
-            return 1;  
-    }
-
-    
-    float novo_salario = salario + aumento;
-
-   
-        printf("O novo salario eh: %.2f\n", novo_salario);
+        printf("R$ %.2f\n", SalarioN);
 
     return 0;
 }
