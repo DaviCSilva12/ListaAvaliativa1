@@ -21,15 +21,15 @@ int main() {
 
        
         if (senhainserida == senhacadastrada) {
-            printf("Senha valida!\n");
+            printf("senha valida!\n");
             break;
         } else {
-            printf("Senha invalida!\n");
+            printf("senha invalida!\n");
         }
 
         
         if (tentativas >= 3) {
-            printf("Limite de tentativas excedido. O programa sera encerrado. Forte abraco!\n");
+            printf("Limite de tentativas excedido. O programa sera encerrado.\n");
             break;
         }
     }
