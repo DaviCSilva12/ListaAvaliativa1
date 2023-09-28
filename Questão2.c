@@ -1,28 +1,28 @@
 #include <stdio.h>
 
-int main() {
-    int numero, digito, soma = 0;
-
+int main(){
+    char n[10];
+    int soma = 0;
+    int caractere;
     
-        printf("Digite um numero inteiro positivo:\n");
-        scanf("%d", &numero);
-
-   
-    if (numero % 2 == 0) {
-        printf("O numero inserido eh par.\n");
-    } else {
-        printf("O numero inserido eh ímpar.\n");
+    for(int i = 0; i < 10; i++){
+    caractere = getchar();
+        if(caractere == '\n' ){
+            break;
+        }
+        n[i] = caractere;
+        soma += (caractere - '0'); 
     }
 
-    
-    while (numero > 0) {
-        digito = numero % 10;   
-        soma += digito;      
-        numero /= 10;        
-    }
+    int n2 = atoi(n);
 
-    
-        printf("A soma dos digitos do numero eh: %d\n", soma);
+    if(n2 % 2 == 0){
+        printf("%d eh par\n", n2);
+        printf("A soma dos algarismos de %d eh %d", n2, soma);
+    } else{
+        printf("%d eh  ímpar\n", n2);
+        printf("A soma dos algarismos de %d eh %d", n2, soma);
+    }
 
     return 0;
 }
